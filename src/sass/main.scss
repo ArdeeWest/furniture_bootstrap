@@ -3,5 +3,12 @@
  * Все паршалы подключаются сюда.
  */
 
+// Include any default variable overrides here (though functions won't be available)
+$primary: teal;
+
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+// Then add additional custom code here
+
 // Стили для файла с примером HTML-фрагмента
 @import './example';
