@@ -1,0 +1,255 @@
+.main-menu {
+  padding: 18px 0 19px;
+}
+
+@include media-breakpoint-down(lg) {
+  .mobile-hidden {
+    display: none;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .desktop-hidden {
+    display: none;
+  }
+}
+
+@include media-breakpoint-between(lg, xl) {
+  .header {
+    zoom: 0.7;
+  }
+}
+
+@include media-breakpoint-between(xl, xxl) {
+  .header {
+    zoom: 0.8;
+  }
+}
+
+@include media-breakpoint-between(xxl, xxxl) {
+  .header {
+    zoom: 0.9;
+  }
+}
+
+.site-menu {
+  position: relative;
+  margin-left: auto;
+
+  & .nav-link {
+    @include font-style();
+    line-height: calc(22.5 / 18);
+    margin-left: 15px;
+  }
+}
+
+.navbar-nav {
+  & .nav-link {
+    @include font-style();
+    line-height: calc(22.5 / 18);
+  }
+
+  & .nav-item:not(:last-child) {
+    margin-right: 18px;
+  }
+}
+
+.contacts-socials {
+  @include font-style();
+  line-height: calc(22.5 / 18);
+  margin-right: 55px;
+
+  &__link {
+    display: block;
+
+    &:hover,
+    &:focus {
+      .contacts-socials__icon {
+        fill: $accent-color;
+      }
+    }
+  }
+}
+
+.contacts-socials__icon {
+  transition: fill 280ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contacts-phones__link {
+  @include font-style();
+
+  line-height: calc(22.5 / 18);
+  color: #1e2e36;
+  padding-right: 8px;
+
+  transition: all 280ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+
+    .contacts-phones__icon {
+      stroke: $accent-color;
+    }
+  }
+}
+
+.contacts-phones__icon {
+  stroke: $main-text-color;
+  transition: stroke 280ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.site-menu__underline {
+  position: absolute;
+  height: 3px;
+  width: 95px;
+  top: 30px;
+  left: 16px;
+  background: $accent-color;
+  transition: 0.5s linear;
+}
+
+.site-menu [href='#promo']:hover,
+.site-menu [href='#promo']:focus {
+  ~ .site-menu__underline {
+    width: 55px;
+    left: 125px;
+  }
+}
+
+.site-menu [href='#delivery']:hover,
+.site-menu [href='#delivery']:focus {
+  ~ .site-menu__underline {
+    width: 230px;
+    left: 195px;
+  }
+}
+
+.site-menu [href='#about']:hover,
+.site-menu [href='#about']:focus {
+  ~ .site-menu__underline {
+    width: 90px;
+    left: 439px;
+  }
+}
+
+.site-menu [href='#contacts']:hover,
+.site-menu [href='#contacts']:focus {
+  ~ .site-menu__underline {
+    width: 105px;
+    left: 544px;
+  }
+}
+
+.dropdown-toggle {
+  color: $main-text-color;
+}
+
+.header .dropdown-toggle::after {
+  display: inline-block;
+  margin-left: 0.1em;
+  vertical-align: 0.1em;
+  content: '';
+  width: 12px;
+  height: 12px;
+  border-top: 2px solid #1e2e36;
+  border-right: 2px solid #1e2e36;
+  border-bottom: 0;
+  border-left: 0;
+  transform: rotate(135deg) scale(0.75);
+  transition: border 280ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header .dropdown-toggle:hover::after {
+  border-top: 2px solid $accent-color;
+  border-right: 2px solid $accent-color;
+}
+
+.main-menu__underline {
+  border-top: 1px solid #1e2e36;
+  margin-top: -10px;
+}
+
+.header .navbar-toggler {
+  color: rgba(0, 0, 0, 0.55);
+  // border-color: rgba(0, 0, 0, 0.1);
+}
+.header .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.header .navbar-nav .nav-link {
+  padding: 0;
+}
+
+.nav-brand__logo {
+  @include font-style($fs: 30px, $tt: none);
+  line-height: calc(45 / 36);
+  display: inline-block;
+
+  &--text {
+    vertical-align: -20px;
+  }
+
+  &--black {
+    color: $main-text-color;
+  }
+}
+
+.nav-brand__icon {
+  margin-right: 15px;
+}
+
+.navbar-basket {
+  &__link {
+    @include font-style();
+    display: inline-block;
+    color: $main-text-color;
+    margin-right: 30px;
+    transition: color 280ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      .navbar-basket__icon {
+        fill: $accent-color;
+      }
+    }
+  }
+  &__icon {
+    transition: fill 280ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.navbar-button {
+  @include font-style();
+  color: $secondary-text-color;
+  width: 278px;
+  height: 51px;
+
+  &:hover,
+  &:focus {
+    color: #ffffff;
+  }
+}
+
+// styles for mobile menu within burger
+
+.mobile-menu {
+  &__phone-icon {
+    margin: 0 10px 0 23px;
+
+    &:hover .contacts-phones__icon,
+    &:focus .contacts-phones__icon {
+      stroke: $accent-color;
+    }
+  }
+
+  &__button {
+    text-align: center;
+    margin: 25px 0;
+  }
+}
+
+.site-menu-mobile__list {
+  @include font-style($tt: none);
+}
