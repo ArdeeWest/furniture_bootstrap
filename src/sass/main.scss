@@ -1,14 +1,41 @@
-/*
- * Главный файл стилей.
- * Все паршалы подключаются сюда.
- */
+// Bootstrap's variable overrides here
+$primary: #44c697;
 
-// Include any default variable overrides here (though functions won't be available)
-$primary: teal;
+$nav-link-color: #1e2e36;
+$nav-link-padding-x: 0;
+
+$navbar-padding-y: 15px;
+$navbar-toggler-focus-width: none;
+
+$container-max-widths: (
+  xxl: 1848px,
+);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1280px,
+  xxl: 1564px,
+  xxxl: 1848px,
+);
+
+$container-padding-x: 15px;
 
 @import '../node_modules/bootstrap/scss/bootstrap';
 
 // Then add additional custom code here
 
+/*
+ * Главный файл стилей.
+ * Все паршалы подключаются сюда.
+ */
+
 // Стили для файла с примером HTML-фрагмента
-@import './example';
+
+// @import './example';
+@import './base';
+@import './variables';
+@import './mixins';
+@import './header';
