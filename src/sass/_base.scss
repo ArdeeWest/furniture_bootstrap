@@ -1,0 +1,35 @@
+// R E S E T  S T Y L E S
+ul {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+// C O M M O N S
+
+body {
+  color: #000000;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+}
