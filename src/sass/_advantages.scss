@@ -1,0 +1,166 @@
+.advantages {
+  padding-top: 100px;
+
+  &__title {
+    @include font-style($fs: 48px, $tt: none);
+    position: relative;
+    color: $main-text-color;
+    line-height: 1.25;
+    text-align: center;
+    margin-bottom: 52px;
+
+    &:before {
+      content: '';
+      width: 20px;
+      height: 50px;
+      background: $accent-color;
+      position: absolute;
+      z-index: -1;
+      transform: translateX(-4px) translateY(4px);
+    }
+  }
+}
+
+.carousel-item {
+  .img-darken {
+    -webkit-filter: brightness(60%) grayscale(72%) contrast(82%);
+    filter: brightness(60%) grayscale(72%) contrast(82%);
+  }
+}
+
+.carousel-caption {
+  left: 5.12%;
+  padding-bottom: 0;
+
+  &__title {
+    @include font-style($fs: 31px, $tt: none);
+    line-height: 1.25;
+    text-align: left;
+    border-bottom: 3px solid $accent-color;
+    width: fit-content;
+    margin-bottom: 15px;
+  }
+
+  &__wrapper-text {
+    overflow: hidden;
+  }
+
+  &__text {
+    margin-bottom: -100%;
+    transition: margin-bottom 390ms cubic-bezier(0.4, 0, 0.2, 1);
+    text-align: left;
+  }
+}
+
+.card {
+  &:hover,
+  &:focus {
+    .carousel-caption__text {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.carousel-benefit__control {
+  &--left,
+  &--right {
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    transition: background-color 280ms cubic-bezier(0.4, 0, 0.2, 1);
+    margin: 0 15px;
+  }
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  vertical-align: middle;
+}
+
+// media for mobile
+@include media-breakpoint-down(sm) {
+  .advantages {
+    padding-top: 35px;
+
+    &__title {
+      @include font-style($fs: 24px, $tt: none);
+      margin-bottom: 25px;
+
+      &:before {
+        content: '';
+        width: 10px;
+        height: 25px;
+        transform: translateX(-2px) translateY(2px);
+      }
+    }
+  }
+
+  .carousel-caption {
+    &__title {
+      @include font-style($fs: 18px, $tt: none);
+      margin-bottom: 0;
+    }
+
+    &__text {
+      @include font-style($fs: 14px, $tt: none);
+    }
+  }
+
+  .card {
+    &:hover,
+    &:focus {
+      z-index: 5;
+    }
+  }
+}
+
+// media for tablet
+
+@include media-breakpoint-between(md, lg) {
+  .advantages {
+    padding-top: 50px;
+
+    &__title {
+      @include font-style($fs: 32px, $tt: none);
+      margin-bottom: 15px;
+
+      &:before {
+        content: '';
+        width: 14px;
+        height: 32px;
+        transform: translateX(-3px) translateY(2px);
+      }
+    }
+  }
+
+  .carousel-caption {
+    &__title {
+      @include font-style($fs: 22px, $tt: none);
+      margin-bottom: 0;
+    }
+
+    &__text {
+      @include font-style($fs: 18px, $tt: none);
+    }
+  }
+  .card {
+    &:hover,
+    &:focus {
+      z-index: 5;
+    }
+  }
+}
+
+@include media-breakpoint-only(xl) {
+  .carousel-caption {
+    &__title {
+      @include font-style($fs: 25px, $tt: none);
+      margin-bottom: 15px;
+    }
+  }
+}
