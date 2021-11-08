@@ -23,6 +23,8 @@ $grid-breakpoints: (
 
 $container-padding-x: 15px;
 
+$carousel-control-icon-width: 1rem;
+
 @import '../node_modules/bootstrap/scss/bootstrap';
 
 // Then add additional custom code here
@@ -40,3 +42,4 @@ $container-padding-x: 15px;
 @import './mixins';
 @import './header';
 @import './hero';
+@import './advantages';
