@@ -1,0 +1,228 @@
+.category {
+  padding-top: 100px;
+
+  &__title {
+    @include font-style($fs: 48px, $tt: none);
+
+    color: $main-text-color;
+    line-height: 1.25;
+    text-align: center;
+    margin-bottom: 50px;
+
+    &:before {
+      content: '';
+      width: 20px;
+      height: 50px;
+      background: $accent-color;
+      position: absolute;
+      z-index: -1;
+      transform: translateX(-4px) translateY(4px);
+    }
+  }
+
+  &__box {
+    margin-bottom: 84px;
+  }
+
+  &__link {
+    @include font-style($fs: 24px);
+    line-height: 1.25;
+    color: $main-text-color;
+
+    &-text {
+      border-bottom: 2px solid transparent;
+      margin-bottom: 3px;
+
+      transition: border-color 280ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &:hover,
+    &:focus {
+      color: $main-text-color;
+
+      .category__link-text {
+        border-bottom: 2px solid $accent-color;
+      }
+      .category__icon {
+        fill: $accent-color;
+      }
+    }
+  }
+
+  &__icon {
+    margin-bottom: 10px;
+    transition: fill 280ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__button {
+    @include font-style();
+    color: $secondary-text-color;
+    width: 190px;
+    height: 51px;
+    padding: 14px;
+    margin-top: 34px;
+
+    &:hover,
+    &:focus {
+      color: $secondary-text-color;
+    }
+  }
+
+  &__catalogue {
+    text-align: center;
+  }
+}
+
+.category__catalogue {
+  .card {
+    border: transparent;
+    transition: all 280ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+      transform: translateY(-25px);
+      .card-body {
+        background-color: $accent-color;
+        color: $secondary-text-color;
+      }
+      .promo-price {
+        color: $secondary-text-color;
+        &--disabled {
+          color: $secondary-text-color;
+        }
+      }
+    }
+  }
+}
+
+.card-body {
+  @include font-style($fs: 24px);
+  line-height: 1.25;
+  color: $main-text-color;
+}
+
+.promo-price {
+  color: #ff1b1b;
+
+  &--disabled {
+    @include font-style();
+    text-decoration: line-through;
+    color: #bcbdbb;
+    margin-left: 5px;
+  }
+}
+
+.img__label {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: max-content;
+  padding: 5px 15px;
+  @include font-style();
+  line-height: 1.25;
+  background: $main-text-color;
+  color: $secondary-text-color;
+
+  &--red-promo {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: max-content;
+    padding: 5px 15px;
+    @include font-style();
+    line-height: 1.25;
+    background: #ff1b1b;
+    color: $secondary-text-color;
+  }
+}
+
+// media for mobile
+
+@include media-breakpoint-down(md) {
+  .category {
+    padding-top: 35px;
+
+    &__title {
+      @include font-style($fs: 24px, $tt: none);
+      margin-bottom: 25px;
+
+      &:before {
+        content: '';
+        width: 10px;
+        height: 25px;
+        transform: translateX(-2px) translateY(2px);
+      }
+    }
+    &__box {
+      margin-bottom: 42px;
+    }
+
+    &__link {
+      @include font-style();
+    }
+  }
+
+  .card-body {
+    @include font-style();
+  }
+
+  .img__label {
+    @include font-style($fs: 16px);
+  }
+
+  .promo-price--disabled {
+    @include font-style($fs: 14px);
+  }
+}
+
+// media for tablet
+
+@include media-breakpoint-between(md, lg) {
+  .category {
+    padding-top: 50px;
+
+    &__title {
+      @include font-style($fs: 32px, $tt: none);
+      margin-bottom: 25px;
+
+      &:before {
+        content: '';
+        width: 14px;
+        height: 32px;
+        transform: translateX(-3px) translateY(2px);
+      }
+    }
+    &__box {
+      margin-bottom: 25px;
+    }
+
+    &__link {
+      @include font-style($fs: 20px);
+    }
+  }
+  .card-body {
+    @include font-style($fs: 16px);
+  }
+
+  .card-text__price {
+    @include font-style($fs: 18px);
+  }
+
+  .promo-price--disabled {
+    @include font-style($fs: 14px);
+  }
+}
+
+// media for screen > 1280 px
+
+@include media-breakpoint-only(xl) {
+  .card-body {
+    @include font-style($fs: 20px);
+  }
+  .card-text__price {
+    @include font-style($fs: 18px);
+  }
+
+  .promo-price--disabled {
+    @include font-style($fs: 16px);
+  }
+}
