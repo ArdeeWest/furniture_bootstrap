@@ -3,11 +3,11 @@
 
   &__title {
     @include font-style($fs: 48px, $tt: none);
-    position: relative;
+
     color: $main-text-color;
     line-height: 1.25;
     text-align: center;
-    margin-bottom: 52px;
+    margin-bottom: 50px;
 
     &:before {
       content: '';
@@ -83,7 +83,7 @@
 }
 
 // media for mobile
-@include media-breakpoint-down(sm) {
+@include media-breakpoint-down(md) {
   .advantages {
     padding-top: 35px;
 
@@ -127,7 +127,7 @@
 
     &__title {
       @include font-style($fs: 32px, $tt: none);
-      margin-bottom: 15px;
+      margin-bottom: 25px;
 
       &:before {
         content: '';
