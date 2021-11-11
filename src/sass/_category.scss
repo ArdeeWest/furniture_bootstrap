@@ -1,5 +1,6 @@
 .category {
-  padding-top: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 
   &__title {
     @include font-style($fs: 48px, $tt: none);
@@ -144,6 +145,7 @@
 @include media-breakpoint-down(md) {
   .category {
     padding-top: 35px;
+    padding-bottom: 35px;
 
     &__title {
       @include font-style($fs: 24px, $tt: none);
@@ -182,7 +184,8 @@
 
 @include media-breakpoint-between(md, lg) {
   .category {
-    padding-top: 50px;
+    padding-top: 25px;
+    padding-top: 25px;
 
     &__title {
       @include font-style($fs: 32px, $tt: none);

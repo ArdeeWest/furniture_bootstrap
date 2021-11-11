@@ -1,0 +1,43 @@
+<section class="questions">
+  <div class="custom-container">
+    <h2 class="questions__title">Залишились питання?</h2>
+    <div class="questions__post">
+      <img
+        class="questions__img"
+        src="images/room.jpg"
+        alt="Диван та двоспальне ліжко у кімнаті з вікном"
+      />
+      <form class="order-form card" name="feedback-form" action="#" method="POST" autocomplete="on">
+        <h3 class="order-form__title">Замовте консультацію</h3>
+        <label>
+          <input
+            class="order-form__input"
+            type="text"
+            name="username"
+            placeholder="Ваше ім'я"
+            required
+          />
+        </label>
+
+        <label>
+          <input
+            class="order-form__input"
+            type="tel"
+            name="phone_number"
+            minlength="10"
+            maxlength="13"
+            placeholder="Номер телефону"
+            required
+          />
+        </label>
+
+        <button class="btn btn-primary order-form__button" type="submit">Відправити</button>
+        <p class="order-form__text">
+          Залиште заявку або телефонуйте за номером
+          <a class="order-form__phone" href="tel:+380991112233">(099) 111 22 33</a>, і наш менеджер
+          звяжеться з вами для кваліфікованої консультації.
+        </p>
+      </form>
+    </div>
+  </div>
+</section>

@@ -1,5 +1,6 @@
 .about {
-  padding-top: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 
   &__title {
     @include font-style($fs: 48px, $tt: none);
@@ -31,6 +32,7 @@
     right: 0;
     width: 73.2%;
     height: 100%;
+    object-fit: cover;
   }
 
   .card {
@@ -68,6 +70,7 @@
 @include media-breakpoint-down(md) {
   .about {
     padding-top: 35px;
+    padding-bottom: 35px;
 
     &__title {
       @include font-style($fs: 24px, $tt: none);
@@ -94,6 +97,7 @@
       @include font-style($fw: 400, $fs: 16px, $tt: none);
       padding: 25px 15px 25px 15px;
       border-right: 5px solid $accent-color;
+      min-height: initial;
 
       &.is-hidden {
         .toggle-text {
@@ -124,7 +128,8 @@
 
 @include media-breakpoint-between(md, lg) {
   .about {
-    padding-top: 50px;
+    padding-top: 25px;
+    padding-bottom: 25px;
 
     &__title {
       @include font-style($fs: 32px, $tt: none);

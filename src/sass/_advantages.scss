@@ -1,5 +1,6 @@
 .advantages {
   padding-top: 100px;
+  padding-bottom: 50px;
 
   &__title {
     @include font-style($fs: 48px, $tt: none);
@@ -85,7 +86,8 @@
 // media for mobile
 @include media-breakpoint-down(md) {
   .advantages {
-    padding-top: 35px;
+    padding-top: 70px;
+    padding-bottom: 35px;
 
     &__title {
       @include font-style($fs: 24px, $tt: none);
@@ -124,6 +126,7 @@
 @include media-breakpoint-between(md, lg) {
   .advantages {
     padding-top: 50px;
+    padding-top: 25px;
 
     &__title {
       @include font-style($fs: 32px, $tt: none);
