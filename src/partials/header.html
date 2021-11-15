@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header" id="header">
   <!-- Desktop version of menu with navigation and contacts -->
   <div class="container mobile-hidden">
     <div class="main-menu d-flex">
@@ -221,7 +221,9 @@
               Кошик</a
             >
             <!-- <button type="button" class="btn btn-primary navbar-button">Замовити дзвінок</button> -->
-            <a class="btn btn-primary navbar-button" href="#" role="button">Замовити дзвінок</a>
+            <a class="btn btn-primary navbar-button" href="#call-back" role="button"
+              >Замовити дзвінок</a
+            >
           </div>
         </div>
       </div>
@@ -229,12 +231,12 @@
   </div>
   <!-- End of desktop version of menu -->
 
-  <!-- Start of mobile version of menu-navigation -->
+  <!-- Start of mobile version of menu -->
 
   <div class="container desktop-hidden">
     <nav class="navbar navbar-expand-lg mobile-menu" aria-label="Навігація каталогом меблів">
-      <div class="custom-container d-flex flex-wrap align-items-center">
-        <a class="me-auto" href="./index.html">
+      <div class="custom-container d-flex flex-wrap align-items-center justify-content-between">
+        <a href="./index.html">
           <img
             src="images/logo.svg"
             alt="Логотип компании"
@@ -251,36 +253,39 @@
           </svg></a
         >
 
-        <a
-          class="dropdown-toggle mobile-menu__phone-icon"
-          href="#"
-          id="dropdown-phones"
-          role="button"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          <svg class="contacts-phones__icon" width="24" height="24">
-            <use href="images/icons.svg#call"></use>
-          </svg>
-        </a>
+        <div class="dropdown">
+          <a
+            class="dropdown-toggle mobile-menu__phone-icon"
+            href="#"
+            id="dropdown-phones"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <svg class="contacts-phones__icon" width="24" height="24">
+              <use href="images/icons.svg#call"></use>
+            </svg>
+          </a>
 
-        <ul class="dropdown-menu" aria-labelledby="dropdown-phones">
-          <li>
-            <a class="dropdown-item contacts-phones__link" href="tel:+380991112244"
-              >(099) 111 22 44</a
-            >
-          </li>
-          <li>
-            <a class="dropdown-item contacts-phones__link" href="tel:+380991112255"
-              >(099) 111 22 55</a
-            >
-          </li>
-          <li>
-            <a class="dropdown-item contacts-phones__link" href="tel:+380991112277"
-              >(099) 111 22 77</a
-            >
-          </li>
-        </ul>
+          <ul class="dropdown-menu" aria-labelledby="dropdown-phones">
+            <li>
+              <a class="dropdown-item contacts-phones__link" href="tel:+380991112244"
+                >(099) 111 22 44</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item contacts-phones__link" href="tel:+380991112255"
+                >(099) 111 22 55</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item contacts-phones__link" href="tel:+380991112277"
+                >(099) 111 22 77</a
+              >
+            </li>
+          </ul>
+        </div>
+
         <button
           class="navbar-toggler"
           type="button"
@@ -300,7 +305,7 @@
             <a class="nav-link" href="#about">Про нас</a>
             <a class="nav-link" href="#contacts">Контакти</a>
           </nav>
-          <ul class="navbar-nav mb-2 mb-lg-0">
+          <ul class="navbar-nav">
             <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"
