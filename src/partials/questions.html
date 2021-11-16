@@ -2,11 +2,17 @@
   <div class="custom-container">
     <h2 class="questions__title">Залишились питання?</h2>
     <div class="questions__post">
-      <img
-        class="questions__img"
-        src="images/room.jpg"
-        alt="Диван та двоспальне ліжко у кімнаті з вікном"
-      />
+      <picture>
+        <source srcset="images/room.webp" type="image/webp" />
+        <img
+          class="questions__img"
+          src="images/room.jpg"
+          loading="lazy"
+          alt="Диван та двоспальне ліжко у кімнаті з вікном"
+          width="1561"
+          height="675"
+        />
+      </picture>
       <form class="order-form card" name="feedback-form" action="#" method="POST" autocomplete="on">
         <h3 class="order-form__title">Замовте консультацію</h3>
         <label>
