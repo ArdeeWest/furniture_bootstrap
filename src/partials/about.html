@@ -3,11 +3,17 @@
     <h2 class="about__title">Про нас</h2>
 
     <div class="about__post">
-      <img
-        class="about__img"
-        src="images/customer.jpg"
-        alt="Продавець меблів консультує покупців в салоні"
-      />
+      <picture>
+        <source srcset="images/customer.webp" type="image/webp" />
+        <img
+          class="about__img"
+          loading="lazy"
+          width="1407"
+          height="675"
+          src="images/customer.jpg"
+          alt="Продавець меблів консультує покупців в салоні"
+        />
+      </picture>
       <article class="card is-hidden" data-show-holder>
         <p>
           <span class="card__brand">Furniture</span> &#8211; lorem ipsum dolor sit amet consectetur
